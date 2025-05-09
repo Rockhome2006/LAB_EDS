@@ -1,0 +1,24 @@
+import numpy as np
+
+def main():
+    # Take input for number of rows and columns
+    rows, cols = map(int, input().split())
+    
+    # Take input for the array elements row-wise
+    elements = []
+    for _ in range(rows):
+        elements.extend(map(int, input().split()))
+    
+    # Create and reshape the numpy array
+    arr = np.array(elements).reshape(rows, cols)
+    
+    # Display the array
+    print(arr)
+    
+    # Display properties
+    print(arr.ndim)
+    print(arr.shape)
+    print(arr.size)
+
+if __name__ == "__main__":
+    main()
